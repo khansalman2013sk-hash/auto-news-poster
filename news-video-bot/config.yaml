@@ -1,0 +1,42 @@
+# ============================================================
+#  news-video-bot configuration
+#  Sab kuch yahin se control hota hai — code mein kuch chhedne
+#  ki zaroorat nahi.
+# ============================================================
+
+# ---- NEWS SOURCE (RSS feeds — legal syndication, no scraping) ----
+rss_feeds:
+  - name: "Google News - India Top Stories"
+    url: "https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en"
+  - name: "Google News - Hindi Top Stories"
+    url: "https://news.google.com/rss?hl=hi-IN&gl=IN&ceid=IN:hi"
+  # Apna koi bhi RSS feed yahan add kar sakte ho, jaise:
+  # - name: "NDTV India"
+  #   url: "https://feeds.feedburner.com/ndtvnews-india-news"
+
+top_n: 10          # video mein kitni news chahiye (10 / 50 / 100 — jo chaho)
+
+# ---- SCRIPT (narration) ----
+# "template" = free, offline, turant kaam karega
+# "ai"       = zyada natural narration, free Gemini API key chahiye (README dekho)
+script_mode: "template"
+
+# ---- VOICE (edge-tts — free) ----
+voice: "hi-IN-MadhurNeural"   # doosre options: hi-IN-SwaraNeural, en-IN-NeerjaNeural
+
+# ---- VIDEO ----
+video:
+  resolution_long: [1920, 1080]     # YouTube / Facebook normal video
+  resolution_shorts: [1080, 1920]   # YouTube Shorts / FB Reels (vertical)
+  make_shorts: true                 # top 3 news ka chhota vertical video bhi banega
+  background_color: "#0B1A33"
+  accent_color: "#E9C46A"
+  font_path: "assets/fonts/NotoSansDevanagari-Bold.ttf"   # Hindi text ke liye zaroori
+  max_seconds_per_item: 15
+
+# ---- PUBLISHING ----
+publish:
+  youtube: true
+  youtube_shorts: true
+  facebook: true
+  privacy_status: "public"   # testing ke liye "unlisted" rakho, phir "public" karo

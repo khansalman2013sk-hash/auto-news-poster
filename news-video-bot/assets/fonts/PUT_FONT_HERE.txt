@@ -1,0 +1,11 @@
+Is folder mein ek Hindi (Devanagari) font file daalo — video ke text-card pe
+Hindi headlines sahi dikhne ke liye ye zaroori hai (default font Hindi text
+show nahi kar payega, boxes/blank dikhega).
+
+Free option (recommended):
+  Google Fonts -> "Noto Sans Devanagari" -> Bold weight download karo
+  -> file ko yahan rakho aur naam do: NotoSansDevanagari-Bold.ttf
+  (ya config.yaml mein video.font_path update kar do agar naam alag rakha)
+
+Audio (TTS) is font se independent hai — wo hamesha sahi Hindi bolega,
+chahe font missing ho. Sirf on-screen text ke liye font chahiye.
